@@ -14,3 +14,4 @@ def num_of_chars(words):
         else:
             counts[f"{character}"] += 1
     return counts
+
