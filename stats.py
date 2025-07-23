@@ -14,4 +14,16 @@ def num_of_chars(words):
         else:
             counts[f"{character}"] += 1
     return counts
+    
+def sorting(item):
+    return(item["num"])
+
+def sort_chars(dict):
+    keys = []
+    for char, num in dict.items():
+        if char.isalpha():
+            keys.append({"char": char, "num": num})
+    keys.sort(reverse=True, key=sorting)
+    return keys
+   
 
