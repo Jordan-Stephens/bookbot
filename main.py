@@ -1,10 +1,15 @@
+import sys
+if len(sys.argv) < 2 or len(sys.argv) > 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+book_dir = sys.argv[1]
+
 from stats import word_counter, num_of_chars, sort_chars
 
 def get_book_text(filepath):
     with open(filepath) as f:
         file_contents = f.read()
     return file_contents
-book_dir = "books/frankenstein.txt"
 
 def main():
     words = get_book_text(book_dir)
